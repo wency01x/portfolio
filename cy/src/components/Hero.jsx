@@ -2,6 +2,25 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Heroprofile from '../assets/Heroprofile.png'
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { 
+      staggerChildren: 0.2 
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { type: "spring", stiffness: 60, damping: 15 } 
+  }
+};
+
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
 
@@ -17,16 +36,22 @@ const Hero = () => {
     <>
       <main className="md:px-8 grid grid-cols-1 md:grid-cols-12 md:gap-6 min-h-screen w-full max-w-7xl z-10 pt-20 pr-4 pb-10 pl-4 gap-x-4 gap-y-4 items-center">
         {/* Left Column: Title & Intro */}
-        <div className="md:col-span-7 flex flex-col md:gap-8 order-2 md:order-1 gap-x-6 gap-y-6 justify-center">
+        <motion.div 
+          className="md:col-span-7 flex flex-col md:gap-8 order-2 md:order-1 gap-x-6 gap-y-6 justify-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
           {/* Availability Badge */}
-          <div className="flex items-center gap-3 opacity-0 animate-fade-in animate-delay-100">
+          <motion.div variants={itemVariants} className="flex items-center gap-3">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-sky-900"></span>
             </span>
-          </div>
+          </motion.div>
 
           {/* Main Heading */}
-          <div className="opacity-0 animate-fade-in animate-delay-200">
+          <motion.div variants={itemVariants}>
             <h1 className="md:text-8xl leading-none bg-clip-text text-6xl font-semibold text-transparent tracking-tight font-google-sans-flex bg-gradient-to-b from-white via-white to-white/50">
               Wency
               <br />
@@ -35,10 +60,10 @@ const Hero = () => {
             <p className="md:text-xl leading-relaxed text-lg font-normal text-white/50 tracking-wide font-google-sans-flex max-w-md mt-6">
               Computer Science undergraduate specializing in Backend Engineering. Backend Developer focused on building scalable databases and robust server-side applications.
             </p>
-          </div>
+          </motion.div>
 
           {/* Action Area */}
-          <div className="flex gap-6 animate-fade-in animate-delay-300 opacity-0 gap-x-6 gap-y-6 items-center">
+          <motion.div variants={itemVariants} className="flex gap-6 gap-x-6 gap-y-6 items-center">
             <button
               onClick={() => setShowResume(true)}
               className="group flex items-center gap-2 bg-[#81D8D0]/10 border border-[#81D8D0] text-[#81D8D0] px-6 py-3.5 rounded-full font-normal text-sm hover:scale-[1.02] hover:bg-[#81D8D0] hover:text-black transition-all duration-300"
@@ -57,8 +82,8 @@ const Hero = () => {
                 <iconify-icon icon="solar:letter-linear" width="22" height="22"></iconify-icon>
               </a>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Column: iOS Widgets Grid */}
         <div className="md:col-span-5 flex flex-col gap-4 order-1 md:order-2 opacity-0 animate-fade-in animate-delay-300">
