@@ -227,7 +227,7 @@ const Hero = () => {
                 <h3 className="text-white font-google-sans-flex text-lg tracking-tight ml-4">Curriculum Vitae</h3>
                 <div className="flex items-center gap-3">
                   <a
-                    href="/resume.pdf"
+                    href={`${import.meta.env.BASE_URL}resume.pdf`}
                     download="Wency_Casino_Resume.pdf"
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#38bdf8]/20 text-[#38bdf8] text-sm hover:bg-[#38bdf8] hover:text-black transition-colors"
                   >
@@ -246,7 +246,7 @@ const Hero = () => {
               {/* PDF Viewer */}
               <div className="flex-1 w-full bg-black/50 p-2 relative">
                 <iframe
-                  src="/resume.pdf#toolbar=0"
+                  src={`${import.meta.env.BASE_URL}resume.pdf#toolbar=0`}
                   className="w-full h-full rounded-[24px] bg-white"
                   title="Wency Casino Resume"
                 />
