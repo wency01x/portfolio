@@ -34,10 +34,10 @@ const Hero = () => {
 
   return (
     <>
-      <main className="md:px-8 grid grid-cols-1 md:grid-cols-12 md:gap-6 min-h-screen w-full max-w-7xl z-10 pt-20 pr-4 pb-10 pl-4 gap-x-4 gap-y-4 items-center">
+      <main className="md:px-8 grid grid-cols-1 md:grid-cols-12 md:gap-8 min-h-screen w-full max-w-7xl z-10 pt-20 pr-4 pb-10 pl-4 gap-x-6 gap-y-10 items-center">
         {/* Left Column: Title & Intro */}
         <motion.div 
-          className="md:col-span-7 flex flex-col md:gap-8 order-2 md:order-1 gap-x-6 gap-y-6 justify-center"
+          className="md:col-span-7 flex flex-col md:gap-8 order-1 gap-x-6 gap-y-6 justify-center"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -52,12 +52,12 @@ const Hero = () => {
 
           {/* Main Heading */}
           <motion.div variants={itemVariants}>
-            <h1 className="md:text-8xl leading-none bg-clip-text text-6xl font-semibold text-transparent tracking-tight font-google-sans-flex bg-gradient-to-b from-white via-white to-white/50">
+            <h1 className="md:text-8xl leading-none bg-clip-text text-5xl sm:text-6xl font-semibold text-transparent tracking-tight font-google-sans-flex bg-gradient-to-b from-white via-white to-white/50">
               Wency
               <br />
               Casiño
             </h1>
-            <p className="md:text-xl leading-relaxed text-lg font-normal text-white/50 tracking-wide font-google-sans-flex max-w-md mt-6">
+            <p className="md:text-xl leading-relaxed text-base sm:text-lg font-normal text-white/50 tracking-wide font-google-sans-flex max-w-md mt-6">
               Computer Science undergraduate specializing in Backend Engineering. Backend Developer focused on building scalable databases and robust server-side applications.
             </p>
           </motion.div>
@@ -88,14 +88,14 @@ const Hero = () => {
         {/* Right Column: iOS Widgets Grid */}
         <div className="md:col-span-5 flex flex-col gap-4 order-1 md:order-2 opacity-0 animate-fade-in animate-delay-300">
           {/* Widget Container */}
-          <div className="relative w-full grid grid-cols-2 grid-rows-3 gap-4">
+          <div className="relative w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Profile Card */}
             <motion.a
               href="experience"
               onClick={(e) => handleScroll(e, 'experience')}
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95, y: 0 }}
-              className="ios-glass rounded-[32px] p-6 col-span-2 flex items-center justify-between hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer relative"
+              className="ios-glass rounded-[32px] p-6 col-span-1 sm:col-span-2 flex items-center justify-between hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer relative"
             >
               <div className="relative z-10 flex flex-col gap-1.5 mt-2">
                 <div className="z-20 flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full border border-white/5 w-fit">
@@ -113,7 +113,7 @@ const Hero = () => {
               </div>
 
               {/* Overlapping Profile Image */}
-              <div className="absolute inset-x-0 bottom-0 pointer-events-none z-10 flex justify-center ml-32 md:ml-48">
+              <div className="absolute inset-x-0 bottom-0 pointer-events-none z-10 flex justify-end pr-4 sm:pr-8 md:pr-12">
                 <img
                   src={Heroprofile}
                   alt="Wency G. Casino"
@@ -187,7 +187,7 @@ const Hero = () => {
               onClick={(e) => handleScroll(e, 'experience')}
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95, y: 0 }}
-              className="ios-glass rounded-[32px] col-span-2 row-span-1 p-6 flex items-center justify-between relative overflow-hidden group cursor-pointer"
+              className="ios-glass rounded-[32px] col-span-1 sm:col-span-2 row-span-1 p-6 flex items-center justify-between relative overflow-hidden group cursor-pointer"
             >
               <div className="relative z-10">
                 <h4 className="text-white font-normal text-lg tracking-tight font-sans">
