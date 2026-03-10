@@ -4,19 +4,44 @@ import ustplogo from '../assets/ustp-logo.jpg';
 import apiCert from '../assets/apicert.png';
 import googleIO from '../assets/google-io.png';
 import apiSec  from '../assets/apiSec.jpg';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { 
+      staggerChildren: 0.2 
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { type: "spring", stiffness: 60, damping: 15 } 
+  }
+};
 
 const Education = () => {
   return (
     <section className="md:px-8 w-full max-w-7xl z-10 border-white/5 border-t pt-24 pr-4 pb-24 pl-4" id="education">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-        <div>
-          <h2 className="text-3xl md:text-5xl tracking-tight text-white mb-2 font-google-sans-flex font-normal">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl tracking-tight text-white mb-2 font-google-sans-flex font-normal">
             Education &amp; Certifications
-          </h2>
-          <p className="text-white/50 text-base md:text-lg font-extralight tracking-wide max-w-lg font-sans">
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-white/50 text-base md:text-lg font-extralight tracking-wide max-w-lg font-sans">
             Academic background and professional technical achievements.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-6 gap-y-6">
