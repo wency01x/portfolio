@@ -30,9 +30,6 @@ const Education = () => {
                 className="w-full h-full object-cover rounded-[28px]"
               />
             </div>
-            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20" class="text-white"></iconify-icon>
-            </div>
           </div>
           <div className="p-5 flex items-start justify-between">
             <div>
@@ -61,9 +58,6 @@ const Education = () => {
                 className="w-full h-full object-cover rounded-[28px]"
               />
             </div>
-            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20" class="text-white"></iconify-icon>
-            </div>
           </div>
           <div className="p-5 flex items-start justify-between">
             <div>
@@ -91,9 +85,6 @@ const Education = () => {
                 alt="API Security Certificate" 
                 className="w-full h-full object-cover rounded-[28px]"
               />
-            </div>
-            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20" class="text-white"></iconify-icon>
             </div>
           </div>
           <div className="p-5 flex items-start justify-between">
@@ -126,9 +117,6 @@ const Education = () => {
                 className="w-full h-full object-cover rounded-[28px]"
               />
             </div>
-            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20" class="text-white"></iconify-icon>
-            </div>
           </div>
           <div className="flex pt-5 pr-5 pb-5 pl-5 items-start justify-between">
             <div>
@@ -150,9 +138,6 @@ const Education = () => {
                 alt="APIsec University Certificate" 
                 className="w-full h-full object-cover rounded-[28px]"
               />
-            </div>
-            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20" class="text-white"></iconify-icon>
             </div>
           </div>
           <div className="p-5 flex items-start justify-between">
