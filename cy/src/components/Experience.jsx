@@ -1,9 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Experience = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["0 1", "0.5 1"] // Animation starts when top of container hits bottom of viewport, ends when center of container hits bottom of viewport
+  });
+
+  // Calculate transforms based on scroll progress
+  const leftX = useTransform(scrollYProgress, [0, 1], [-150, 0]);
+  const rightX = useTransform(scrollYProgress, [0, 1], [150, 0]);
+  const centerScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
-    <section className="md:px-8 z-10 w-full max-w-7xl border-white/5 border-t pt-24 pr-4 pb-24 pl-4" id="experience">
+    <section 
+      ref={containerRef}
+      className="md:px-8 z-10 w-full max-w-7xl border-white/5 border-t pt-24 pr-4 pb-24 pl-4" 
+      id="experience"
+    >
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
           <h2 className="text-3xl md:text-5xl tracking-tight text-white mb-2 font-google-sans-flex font-normal">
@@ -18,6 +34,7 @@ const Experience = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Experience 1 */}
         <motion.div
+           style={{ x: leftX, opacity }}
           whileHover={{ y: -5 }}
           className="ios-glass p-8 rounded-[32px] hover:bg-white/5 transition-all duration-500 group tiffany-glow relative overflow-hidden cursor-pointer"
         >
@@ -38,6 +55,7 @@ const Experience = () => {
 
         {/* Experience 2 */}
         <motion.div
+          style={{ scale: centerScale, opacity }}
           whileHover={{ y: -5 }}
           className="ios-glass p-8 rounded-[32px] hover:bg-white/5 transition-all duration-500 group tiffany-glow relative overflow-hidden cursor-pointer"
         >
@@ -58,6 +76,7 @@ const Experience = () => {
 
         {/* Experience 3 */}
         <motion.div
+           style={{ x: rightX, opacity }}
           whileHover={{ y: -5 }}
           className="ios-glass p-8 rounded-[32px] hover:bg-white/5 transition-all duration-500 group tiffany-glow relative overflow-hidden cursor-pointer"
         >
