@@ -14,6 +14,25 @@ const Experience = () => {
   const centerScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { 
+        staggerChildren: 0.2 
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { type: "spring", stiffness: 60, damping: 15 } 
+    }
+  };
+
   return (
     <section 
       ref={containerRef}
@@ -21,14 +40,19 @@ const Experience = () => {
       id="experience"
     >
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-        <div>
-          <h2 className="text-3xl md:text-5xl tracking-tight text-white mb-2 font-google-sans-flex font-normal">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl tracking-tight text-white mb-2 font-google-sans-flex font-normal">
             Experience
-          </h2>
-          <p className="text-white/50 text-base md:text-lg font-extralight tracking-wide max-w-lg font-sans">
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-white/50 text-base md:text-lg font-extralight tracking-wide max-w-lg font-sans">
             Professional roles and major academic system implementations.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
