@@ -33,7 +33,7 @@ const Education = () => {
           </div>
           <div className="p-5 flex items-start justify-between">
             <div>
-              <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
+              <h3 className="text-xl text-white tracking-tight group-hover:text-[#38bdf8] transition-colors font-google-sans-flex font-normal">
                 BS Computer Science
               </h3>
               <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
@@ -51,7 +51,7 @@ const Education = () => {
         {/* Certification Card 2 */}
         <div className="group ios-glass p-1.5 rounded-[32px] hover:border-white/10 transition-all duration-500">
           <div className="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#81D8D0]/10 to-emerald-900/20 card-image-hover flex flex-col items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#38bdf8]/10 to-emerald-900/20 card-image-hover flex flex-col items-center justify-center">
               <img 
                 src={cs50Cert} 
                 alt="CS50 Certificate" 
@@ -61,7 +61,7 @@ const Education = () => {
           </div>
           <div className="p-5 flex items-start justify-between">
             <div>
-              <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
+              <h3 className="text-xl text-white tracking-tight group-hover:text-[#38bdf8] transition-colors font-google-sans-flex font-normal">
                 CS50 Intro to Databases
               </h3>
               <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
@@ -89,7 +89,7 @@ const Education = () => {
           </div>
           <div className="p-5 flex items-start justify-between">
             <div>
-              <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
+              <h3 className="text-xl text-white tracking-tight group-hover:text-[#38bdf8] transition-colors font-google-sans-flex font-normal">
                 API Security
               </h3>
               <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
@@ -120,7 +120,7 @@ const Education = () => {
           </div>
           <div className="flex pt-5 pr-5 pb-5 pl-5 items-start justify-between">
             <div>
-              <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
+              <h3 className="text-xl text-white tracking-tight group-hover:text-[#38bdf8] transition-colors font-google-sans-flex font-normal">
                 Google I/O
               </h3>
               <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
@@ -132,7 +132,7 @@ const Education = () => {
         {/* Certification Card 5 */}
         <div className="group ios-glass p-1.5 rounded-[32px] hover:border-white/10 transition-all duration-500">
           <div className="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#81D8D0]/20 to-black card-image-hover flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#38bdf8]/20 to-black card-image-hover flex items-center justify-center">
               <img 
                 src={apiSec} 
                 alt="APIsec University Certificate" 
@@ -142,7 +142,7 @@ const Education = () => {
           </div>
           <div className="p-5 flex items-start justify-between">
             <div>
-              <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
+              <h3 className="text-xl text-white tracking-tight group-hover:text-[#38bdf8] transition-colors font-google-sans-flex font-normal">
                 APIsec Certified
               </h3>
               <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
