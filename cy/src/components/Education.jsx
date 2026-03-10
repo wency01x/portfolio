@@ -3,6 +3,7 @@ import cs50Cert from '../assets/cs50-idb.png';
 import ustplogo from '../assets/ustp-logo.jpg';
 import apiCert from '../assets/apicert.png';
 import googleIO from '../assets/google-io.png';
+import apiSec  from '../assets/apiSec.jpg';
 
 const Education = () => {
   return (
@@ -98,10 +99,10 @@ const Education = () => {
           <div className="p-5 flex items-start justify-between">
             <div>
               <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
-                API Security &amp; Dev
+                API Security
               </h3>
               <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
-                APIsec University &amp; Postman Academy
+                Postman Academy
               </p>
             </div>
             <div className="flex gap-2">
@@ -145,7 +146,7 @@ const Education = () => {
           <div className="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#81D8D0]/20 to-black card-image-hover flex items-center justify-center">
               <img 
-                src={apiCert} 
+                src={apiSec} 
                 alt="APIsec University Certificate" 
                 className="w-full h-full object-cover rounded-[28px]"
               />
