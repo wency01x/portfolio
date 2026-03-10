@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="scroll-smooth min-h-screen flex flex-col items-center selection:bg-[#81D8D0] selection:text-black text-white bg-black w-full relative">
+    <div className="scroll-smooth min-h-screen flex flex-col items-center selection:bg-[#38bdf8] selection:text-black text-white bg-black w-full relative">
       <BackgroundAmbiance />
       <Navbar />
       <Hero />
