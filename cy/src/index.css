@@ -19,6 +19,7 @@
     opacity: 0;
     transform: translateY(20px) scale(0.98);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -45,11 +46,11 @@
 /* Custom Toggle Switch */
 .toggle-checkbox:checked {
   right: 0;
-  border-color: #81D8D0;
+  border-color: #38bdf8;
 }
 
-.toggle-checkbox:checked + .toggle-label {
-  background-color: #81D8D0;
+.toggle-checkbox:checked+.toggle-label {
+  background-color: #38bdf8;
 }
 
 /* Subtle texture for iOS feeling */
