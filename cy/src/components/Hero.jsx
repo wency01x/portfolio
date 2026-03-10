@@ -66,19 +66,19 @@ const Hero = () => {
           <motion.div variants={itemVariants} className="flex gap-6 gap-x-6 gap-y-6 items-center">
             <button
               onClick={() => setShowResume(true)}
-              className="group flex items-center gap-2 bg-[#81D8D0]/10 border border-[#81D8D0] text-[#81D8D0] px-6 py-3.5 rounded-full font-normal text-sm hover:scale-[1.02] hover:bg-[#81D8D0] hover:text-black transition-all duration-300"
+              className="group flex items-center gap-2 bg-[#38bdf8]/10 border border-[#38bdf8] text-[#38bdf8] px-6 py-3.5 rounded-full font-normal text-sm hover:scale-[1.02] hover:bg-[#38bdf8] hover:text-black transition-all duration-300"
             >
               <span className="font-sans">View Resume</span>
               <iconify-icon icon="solar:document-text-linear" width="18" height="18" class="group-hover:translate-y-0.5 transition-transform"></iconify-icon>
             </button>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-white/40 hover:text-[#81D8D0] transition-colors">
+              <a href="#" className="text-white/40 hover:text-[#38bdf8] transition-colors">
                 <iconify-icon icon="solar:code-circle-linear" width="22" height="22"></iconify-icon>
               </a>
-              <a href="#" className="text-white/40 hover:text-[#81D8D0] transition-colors">
+              <a href="#" className="text-white/40 hover:text-[#38bdf8] transition-colors">
                 <iconify-icon icon="solar:users-group-rounded-linear" width="22" height="22"></iconify-icon>
               </a>
-              <a href="mailto:casino.wency2ustp@gmail.com" className="text-white/40 hover:text-[#81D8D0] transition-colors">
+              <a href="mailto:casino.wency2ustp@gmail.com" className="text-white/40 hover:text-[#38bdf8] transition-colors">
                 <iconify-icon icon="solar:letter-linear" width="22" height="22"></iconify-icon>
               </a>
             </div>
@@ -100,10 +100,10 @@ const Hero = () => {
               <div className="relative z-10 flex flex-col gap-1.5 mt-2">
                 <div className="z-20 flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full border border-white/5 w-fit">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-[#81D8D0]"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#81D8D0]"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-[#38bdf8]"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#38bdf8]"></span>
                   </span>
-                  <span className="text-[#81D8D0] text-xs font-sans tracking-wide">Available for work</span>
+                  <span className="text-[#38bdf8] text-xs font-sans tracking-wide">Available for work</span>
                 </div>
                 <div className="z-20">
                   <p className="text-white font-normal text-sm font-sans pl-1">
@@ -121,7 +121,7 @@ const Hero = () => {
                 />
               </div>
               {/* Abstract Shape */}
-              <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#81D8D0] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500 pointer-events-none"></div>
             </motion.a>
 
             {/* Stats Widget */}
@@ -133,7 +133,7 @@ const Hero = () => {
               className="ios-glass rounded-[32px] p-5 flex flex-col justify-between group hover:bg-white/5 transition-colors cursor-pointer relative overflow-hidden"
             >
               <div className="relative z-10 flex justify-between items-start">
-                <div className="p-2 rounded-xl bg-white/5 text-white/60 group-hover:text-[#81D8D0] transition-colors">
+                <div className="p-2 rounded-xl bg-white/5 text-white/60 group-hover:text-[#38bdf8] transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" data-icon-set="solar" data-solar="diploma-linear">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <circle cx="12" cy="16" r="3"></circle>
@@ -151,7 +151,7 @@ const Hero = () => {
                 <div className="text-xs text-white/40 mt-1 font-sans">Certifications</div>
               </div>
               {/* Abstract Shape */}
-              <div className="absolute right-[-20px] bottom-[-20px] w-24 h-24 bg-gradient-to-br from-[#81D8D0] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute right-[-20px] bottom-[-20px] w-24 h-24 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
             </motion.a>
 
             {/* GitHub Commits Widget */}
@@ -164,10 +164,10 @@ const Hero = () => {
               className="ios-glass flex flex-col group hover:bg-white/5 transition-colors rounded-[32px] pt-5 pr-5 pb-5 pl-5 justify-between relative overflow-hidden cursor-pointer tiffany-glow"
             >
               <div className="relative z-10 flex justify-between items-start w-full">
-                <div className="p-2 rounded-xl bg-white/5 text-white/60 group-hover:text-[#81D8D0] transition-colors">
+                <div className="p-2 rounded-xl bg-white/5 text-white/60 group-hover:text-[#38bdf8] transition-colors">
                   <iconify-icon icon="mdi:github" width="22" height="22"></iconify-icon>
                 </div>
-                <div className="p-1.5 rounded-full bg-white/5 text-white/40 group-hover:bg-[#81D8D0]/20 group-hover:text-[#81D8D0] transition-colors">
+                <div className="p-1.5 rounded-full bg-white/5 text-white/40 group-hover:bg-[#38bdf8]/20 group-hover:text-[#38bdf8] transition-colors">
                   <iconify-icon icon="solar:arrow-right-up-linear" width="16" height="16"></iconify-icon>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const Hero = () => {
                 <div className="text-xs text-white/40 mt-1 font-sans">GitHub Commits</div>
               </div>
               {/* Abstract Shape */}
-              <div className="absolute right-[-20px] bottom-[-20px] w-24 h-24 bg-gradient-to-br from-[#81D8D0] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="absolute right-[-20px] bottom-[-20px] w-24 h-24 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
             </motion.a>
 
             {/* Skill Stack / Visual */}
@@ -194,14 +194,14 @@ const Hero = () => {
                   Core Stack
                 </h4>
                 <div className="flex gap-3 mt-3">
-                  <iconify-icon icon="solar:code-linear" width="20" height="20" class="text-white/60 group-hover:text-[#81D8D0] transition-colors"></iconify-icon>
-                  <iconify-icon icon="solar:database-linear" width="20" height="20" class="text-white/60 group-hover:text-[#81D8D0] transition-colors"></iconify-icon>
-                  <iconify-icon icon="solar:server-square-linear" width="20" height="20" class="text-white/60 group-hover:text-[#81D8D0] transition-colors"></iconify-icon>
+                  <iconify-icon icon="solar:code-linear" width="20" height="20" class="text-white/60 group-hover:text-[#38bdf8] transition-colors"></iconify-icon>
+                  <iconify-icon icon="solar:database-linear" width="20" height="20" class="text-white/60 group-hover:text-[#38bdf8] transition-colors"></iconify-icon>
+                  <iconify-icon icon="solar:server-square-linear" width="20" height="20" class="text-white/60 group-hover:text-[#38bdf8] transition-colors"></iconify-icon>
                 </div>
               </div>
 
               {/* Abstract Shape */}
-              <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#81D8D0] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
             </motion.a>
           </div>
         </div>
@@ -220,7 +220,7 @@ const Hero = () => {
               initial={{ scale: 0.95, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
-              className="w-full max-w-4xl h-[85vh] flex flex-col ios-glass border-[#81D8D0]/30 rounded-[32px] overflow-hidden shadow-[0_0_60px_-15px_rgba(129,216,208,0.3)]"
+              className="w-full max-w-4xl h-[85vh] flex flex-col ios-glass border-[#38bdf8]/30 rounded-[32px] overflow-hidden shadow-[0_0_60px_-15px_rgba(129,216,208,0.3)]"
             >
               {/* Modal Header */}
               <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black/40">
@@ -229,7 +229,7 @@ const Hero = () => {
                   <a
                     href="/resume.pdf"
                     download="Wency_Casino_Resume.pdf"
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#81D8D0]/20 text-[#81D8D0] text-sm hover:bg-[#81D8D0] hover:text-black transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#38bdf8]/20 text-[#38bdf8] text-sm hover:bg-[#38bdf8] hover:text-black transition-colors"
                   >
                     <iconify-icon icon="solar:download-square-linear" width="18" height="18"></iconify-icon>
                     Download PDF
