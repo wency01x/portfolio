@@ -140,6 +140,36 @@ const Education = () => {
             </div>
           </div>
         </div>
+        {/* Certification Card 5 */}
+        <div className="group ios-glass p-1.5 rounded-[32px] hover:border-white/10 transition-all duration-500">
+          <div className="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#81D8D0]/20 to-black card-image-hover flex items-center justify-center">
+              <img 
+                src={apiCert} 
+                alt="APIsec University Certificate" 
+                className="w-full h-full object-cover rounded-[28px]"
+              />
+            </div>
+            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20" class="text-white"></iconify-icon>
+            </div>
+          </div>
+          <div className="p-5 flex items-start justify-between">
+            <div>
+              <h3 className="text-xl text-white tracking-tight group-hover:text-[#81D8D0] transition-colors font-google-sans-flex font-normal">
+                APIsec Certified
+              </h3>
+              <p className="text-sm text-white/40 mt-1 font-extralight font-sans">
+                 APIsec University
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-xs font-normal text-white/60 tracking-wider uppercase font-sans">
+                Security
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
