@@ -82,13 +82,6 @@ const Hero = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
         >
-          {/* Availability Badge */}
-          <motion.div variants={itemVariants} className="flex items-center gap-3">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-sky-900"></span>
-            </span>
-          </motion.div>
-
           {/* Main Heading */}
           <motion.div variants={itemVariants}>
             <h1 className="md:text-8xl leading-none bg-clip-text text-5xl sm:text-6xl font-semibold text-transparent tracking-tight font-google-sans-flex bg-gradient-to-b from-white via-white to-white/50">
