@@ -18,7 +18,7 @@ const Navbar = () => {
         <a href="education" onClick={(e) => handleScroll(e, 'education')} className="hover:text-white hover:bg-white/10 transition-all duration-300 text-xs font-normal text-white/70 font-sans rounded-full pt-2.5 pr-5 pb-2.5 pl-5">
           Education
         </a>
-        <a href="mailto:casino.wency2ustp@gmail.com" className="hover:text-white hover:bg-white/10 transition-all duration-300 text-xs font-normal text-white/70 font-sans rounded-full pt-2.5 pr-5 pb-2.5 pl-5">
+        <a href="contact" onClick={(e) => handleScroll(e, 'contact')} className="hover:text-white hover:bg-white/10 transition-all duration-300 text-xs font-normal text-white/70 font-sans rounded-full pt-2.5 pr-5 pb-2.5 pl-5">
           Contact
         </a>
       </div>

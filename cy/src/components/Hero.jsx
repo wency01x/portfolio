@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Heroprofile from '../assets/Heroprofile.png'
 
@@ -23,6 +23,45 @@ const itemVariants = {
 
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
+  const [commits, setCommits] = useState('200+');
+
+  useEffect(() => {
+    const fetchCommits = async () => {
+      try {
+        // Clear old stale cache keys from previous versions
+        localStorage.removeItem('github_commits');
+        localStorage.removeItem('github_commits_time');
+
+        const cached = localStorage.getItem('github_contributions_v2');
+        const cachedTime = localStorage.getItem('github_contributions_time_v2');
+        
+        // Use cache if less than 1 hour old
+        if (cached && cachedTime && (Date.now() - parseInt(cachedTime)) < 3600000) {
+          setCommits(`${cached}+`);
+          return;
+        }
+
+        const response = await fetch('https://github-contributions-api.deno.dev/wency01x.json');
+        const data = await response.json();
+        
+        if (data.totalContributions) {
+          const rounded = Math.floor(data.totalContributions / 100) * 100;
+          setCommits(`${rounded}+`);
+          localStorage.setItem('github_contributions_v2', rounded.toString());
+          localStorage.setItem('github_contributions_time_v2', Date.now().toString());
+        } else {
+          console.log("GitHub Contributions API Error:", data);
+          if (cached) {
+            setCommits(`${cached}+`);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching commits:', error);
+      }
+    };
+
+    fetchCommits();
+  }, []);
 
   const handleScroll = (e, targetId) => {
     e.preventDefault();
@@ -71,17 +110,6 @@ const Hero = () => {
               <span className="font-sans">View Resume</span>
               <iconify-icon icon="solar:document-text-linear" width="18" height="18" class="group-hover:translate-y-0.5 transition-transform"></iconify-icon>
             </button>
-            <div className="flex items-center gap-4">
-              <a href="#" className="text-white/40 hover:text-[#38bdf8] transition-colors">
-                <iconify-icon icon="solar:code-circle-linear" width="22" height="22"></iconify-icon>
-              </a>
-              <a href="#" className="text-white/40 hover:text-[#38bdf8] transition-colors">
-                <iconify-icon icon="solar:users-group-rounded-linear" width="22" height="22"></iconify-icon>
-              </a>
-              <a href="mailto:casino.wency2ustp@gmail.com" className="text-white/40 hover:text-[#38bdf8] transition-colors">
-                <iconify-icon icon="solar:letter-linear" width="22" height="22"></iconify-icon>
-              </a>
-            </div>
           </motion.div>
         </motion.div>
 
@@ -146,7 +174,7 @@ const Hero = () => {
               </div>
               <div className="relative z-10">
                 <div className="text-2xl text-white tracking-tight font-google-sans-flex font-normal">
-                  4+
+                  5+
                 </div>
                 <div className="text-xs text-white/40 mt-1 font-sans">Certifications</div>
               </div>
@@ -173,7 +201,7 @@ const Hero = () => {
               </div>
               <div className="relative z-10">
                 <div className="text-2xl text-white tracking-tight font-google-sans-flex font-normal">
-                  200+
+                  {commits}
                 </div>
                 <div className="text-xs text-white/40 mt-1 font-sans">GitHub Commits</div>
               </div>
@@ -187,7 +215,7 @@ const Hero = () => {
               onClick={(e) => handleScroll(e, 'experience')}
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95, y: 0 }}
-              className="ios-glass rounded-[32px] col-span-1 sm:col-span-2 row-span-1 p-6 flex items-center justify-between relative overflow-hidden group cursor-pointer"
+              className="ios-glass rounded-[32px] col-span-1 sm:col-span-2 row-span-1 p-6 flex flex-col justify-center relative overflow-hidden group cursor-pointer"
             >
               <div className="relative z-10">
                 <h4 className="text-white font-normal text-lg tracking-tight font-sans">
@@ -224,7 +252,7 @@ const Hero = () => {
             >
               {/* Modal Header */}
               <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black/40">
-                <h3 className="text-white font-google-sans-flex text-lg tracking-tight ml-4">Curriculum Vitae</h3>
+                <h3 className="text-white font-google-sans-flex text-lg tracking-tight ml-4">Resume</h3>
                 <div className="flex items-center gap-3">
                   <a
                     href={`${import.meta.env.BASE_URL}resume.pdf`}

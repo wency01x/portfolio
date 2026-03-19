@@ -7,10 +7,10 @@ const Footer = () => {
         CONNECT WITH ME
       </p>
       <div className="flex justify-center gap-6">
-        <a href="#" className="text-xs text-white/40 hover:text-white transition-colors font-sans">
+        <a href="https://github.com/wency01x" target="_blank" rel="noopener noreferrer" className="text-xs text-white/40 hover:text-white transition-colors font-sans">
           GitHub
         </a>
-        <a href="#" className="text-xs text-white/40 hover:text-white transition-colors font-sans">
+        <a href="https://www.linkedin.com/in/wency-casi%C3%B1o-799655337/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/40 hover:text-white transition-colors font-sans">
           LinkedIn
         </a>
         <a href="mailto:casino.wency2ustp@gmail.com" className="text-xs text-white/40 hover:text-white transition-colors font-sans">
