@@ -57,7 +57,7 @@ const Experience = () => {
       tech: "C++, Automata Theory (NFA/DFA/PDA), Bioinformatics",
       desc: "A C++ simulator exploring Formal Language Theory in information retrieval and bioinformatics. It compiles user queries into NFAs/DFAs for pattern matching and implements Pushdown Automata.",
       icon: "solar:code-1-linear",
-      image: "https://placehold.co/600x400/101010/38bdf8?text=Theory+Simulator"
+      image: "src/assets/automata.png"
     },
     {
       title: "Redis-PubSub-Chat",
