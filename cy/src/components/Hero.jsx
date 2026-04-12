@@ -73,10 +73,10 @@ const Hero = () => {
 
   return (
     <>
-      <main className="md:px-8 grid grid-cols-1 md:grid-cols-12 md:gap-8 min-h-screen w-full max-w-7xl z-10 pt-20 pr-4 pb-10 pl-4 gap-x-6 gap-y-10 items-center">
+      <main className="lg:px-8 grid grid-cols-1 lg:grid-cols-12 lg:gap-8 min-h-screen w-full max-w-7xl z-10 pt-20 pr-4 pb-10 pl-4 gap-x-6 gap-y-10 items-center">
         {/* Left Column: Title & Intro */}
         <motion.div
-          className="md:col-span-7 flex flex-col md:gap-8 order-1 gap-x-6 gap-y-6 justify-center"
+          className="lg:col-span-7 flex flex-col lg:gap-8 gap-x-6 gap-y-6 justify-center"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -84,30 +84,38 @@ const Hero = () => {
         >
           {/* Main Heading */}
           <motion.div variants={itemVariants}>
-            <h1 className="md:text-8xl leading-none bg-clip-text text-5xl sm:text-6xl font-semibold text-transparent tracking-tight font-google-sans-flex bg-gradient-to-b from-white via-white to-white/50">
+            <h1 className="lg:text-8xl md:text-7xl leading-none bg-clip-text text-5xl sm:text-6xl font-semibold text-transparent tracking-tight font-google-sans-flex bg-gradient-to-b from-white via-white to-white/50">
               Wency
               <br />
               Casiño
             </h1>
-            <p className="md:text-xl leading-relaxed text-base sm:text-lg font-normal text-white/50 tracking-wide font-google-sans-flex max-w-md mt-6">
+            <p className="lg:text-xl md:text-lg leading-relaxed text-base sm:text-lg font-normal text-white/50 tracking-wide font-google-sans-flex max-w-md mt-6">
               Computer Science undergraduate specializing in Backend Engineering. Backend Developer focused on building scalable databases and robust server-side applications.
             </p>
           </motion.div>
 
           {/* Action Area */}
-          <motion.div variants={itemVariants} className="flex gap-6 gap-x-6 gap-y-6 items-center">
-            <button
+          <motion.div variants={itemVariants}>
+            <motion.button
               onClick={() => setShowResume(true)}
-              className="group flex items-center gap-2 bg-[#38bdf8]/10 border border-[#38bdf8] text-[#38bdf8] px-6 py-3.5 rounded-full font-normal text-sm hover:scale-[1.02] hover:bg-[#38bdf8] hover:text-black transition-all duration-300"
+              whileHover={{ y: -5 }}
+              whileTap={{ scale: 0.95, y: 0 }}
+              className="ios-glass group w-full sm:w-auto rounded-[28px] p-5 flex items-center justify-between gap-6 hover:bg-white/5 transition-colors duration-500 cursor-pointer relative overflow-hidden"
             >
-              <span className="font-sans">View Resume</span>
-              <iconify-icon icon="solar:document-text-linear" width="18" height="18" class="group-hover:translate-y-0.5 transition-transform"></iconify-icon>
-            </button>
+              <div className="relative z-10 flex flex-col items-start">
+                <span className="text-white group-hover:text-[#38bdf8] text-lg font-normal tracking-tight font-google-sans-flex transition-colors duration-300">
+                  View Resume
+                </span>
+              </div>
+              <div className="relative z-10 p-2.5 rounded-2xl bg-white/5 text-white/50 group-hover:text-[#38bdf8] group-hover:bg-[#38bdf8]/10 transition-all duration-300">
+                <iconify-icon icon="solar:document-text-linear" width="22" height="22"></iconify-icon>
+              </div>
+            </motion.button>
           </motion.div>
         </motion.div>
 
         {/* Right Column: iOS Widgets Grid */}
-        <div className="md:col-span-5 flex flex-col gap-4 order-1 md:order-2 opacity-0 animate-fade-in animate-delay-300">
+        <div className="lg:col-span-5 flex flex-col gap-4 opacity-0 animate-fade-in animate-delay-300">
           {/* Widget Container */}
           <div className="relative w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Profile Card */}
