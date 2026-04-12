@@ -35,7 +35,7 @@ const Experience = () => {
       title: "AI-Powered LinkedIn Content System",
       tech: "AI Integration, Automation, Lead Generation",
       desc: "An AI-powered content system that researches, writes, and schedules LinkedIn posts designed to build authority and generate inbound leads on autopilot.",
-      icon: "solar:robot-linear",
+      icon: "lucide:bot",
       image: "/src/assets/linked-in.png"
     },
     {
@@ -43,21 +43,21 @@ const Experience = () => {
       tech: "Python, FastAPI, PostgreSQL, pgvector, Gemini API",
       desc: "An AI agent that allows users to query their database in plain English. The system stores database schemas using embeddings, translates natural language into SQL, executes the query, and explains the answer.",
       icon: "solar:database-line-duotone",
-      image: "src/assets/dbmind.png"
+      image: "/src/assets/dbmind.png"
     },
     {
       title: "iREQUEST: Online Credential Request System",
       tech: "Full-stack Web Development, Payment Integration",
       desc: "A full-stack web application with admin verification and payment monitoring. It handles requests for student credentials and allows administrators to track, verify, and approve them.",
       icon: "solar:document-text-linear",
-      image: "src/assets/login.png"
+      image: "/src/assets/login.png"
     },
     {
       title: "Formal Language Theory Simulator",
       tech: "C++, Automata Theory (NFA/DFA/PDA), Bioinformatics",
       desc: "A C++ simulator exploring Formal Language Theory in information retrieval and bioinformatics. It compiles user queries into NFAs/DFAs for pattern matching and implements Pushdown Automata.",
-      icon: "solar:code-1-linear",
-      image: "src/assets/automata.png"
+      icon: "lucide:code",
+      image: "/src/assets/automata.png"
     },
     {
       title: "Redis-PubSub-Chat",
@@ -71,7 +71,7 @@ const Experience = () => {
       tech: "Python, CustomTkinter (GUI), SQLite, QR Code",
       desc: "A desktop application commissioned by a University Registrar to manage student data and geographical locations. Features include dynamic search, duplicate validation, and automated QR code generation.",
       icon: "solar:map-point-linear",
-      image: "src/assets/main.png"
+      image: "/src/assets/main.png"
     }
   ];
 
