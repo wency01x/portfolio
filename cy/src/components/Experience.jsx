@@ -64,14 +64,14 @@ const Experience = () => {
       tech: "Python, Redis, Pub/Sub, Distributed Systems",
       desc: "A real-time, terminal-based chat application demonstrating distributed system design. It utilizes Cloud Redis as a centralized message broker and Python's threading module.",
       icon: "solar:chat-round-line-linear",
-      image: "https://placehold.co/600x400/101010/38bdf8?text=Redis+Chat"
+      image: "/src/assets/redis.png"
     },
     {
       title: "LocatR - Student Record Locator System",
       tech: "Python, CustomTkinter (GUI), SQLite, QR Code",
       desc: "A desktop application commissioned by a University Registrar to manage student data and geographical locations. Features include dynamic search, duplicate validation, and automated QR code generation.",
       icon: "solar:map-point-linear",
-      image: "https://placehold.co/600x400/101010/38bdf8?text=LocatR"
+      image: "src/assets/main.png"
     }
   ];
 
@@ -119,11 +119,8 @@ const Experience = () => {
                 <img 
                   src={project.image || "/src/assets/on-hold.png"} 
                   alt={project.title} 
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-50 group-hover:opacity-0 transition-opacity duration-300">
-                  <iconify-icon icon="solar:gallery-linear" width="32" height="32" className="text-white/40"></iconify-icon>
-                </div>
               </div>
 
               <div className="relative z-10 w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-[#38bdf8] group-hover:scale-110 transition-all duration-300 mb-6 border border-white/5">
