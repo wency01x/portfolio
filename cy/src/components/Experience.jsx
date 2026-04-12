@@ -1,6 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
+import onHoldImg from '../assets/on-hold.png';
+import linkedInImg from '../assets/linked-in.png';
+import dbmindImg from '../assets/dbmind.png';
+import loginImg from '../assets/login.png';
+import automataImg from '../assets/automata.png';
+import redisImg from '../assets/redis.png';
+import mainImg from '../assets/main.png';
+
 const Experience = () => {
   const containerRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -29,49 +37,49 @@ const Experience = () => {
       tech: "Three-Tier Architecture, Distributed Systems, PostgreSQL, Asyncio",
       desc: "A full-stack, high-concurrency event ticketing platform designed to handle real-time movie theater seat reservations. Built to withstand race conditions using production-ready system design principles like Pessimistic Locking for concurrency control and background asyncio workers for automated cart expiration.",
       icon: "solar:ticket-linear",
-      image: "/src/assets/on-hold.png"
+      image: onHoldImg
     },
     {
       title: "AI-Powered LinkedIn Content System",
       tech: "AI Integration, Automation, Lead Generation",
       desc: "An AI-powered content system that researches, writes, and schedules LinkedIn posts designed to build authority and generate inbound leads on autopilot.",
       icon: "lucide:bot",
-      image: "/src/assets/linked-in.png"
+      image: linkedInImg
     },
     {
       title: "DBMind Agent",
       tech: "Python, FastAPI, PostgreSQL, pgvector, Gemini API",
       desc: "An AI agent that allows users to query their database in plain English. The system stores database schemas using embeddings, translates natural language into SQL, executes the query, and explains the answer.",
       icon: "solar:database-line-duotone",
-      image: "/src/assets/dbmind.png"
+      image: dbmindImg
     },
     {
       title: "iREQUEST: Online Credential Request System",
       tech: "Full-stack Web Development, Payment Integration",
       desc: "A full-stack web application with admin verification and payment monitoring. It handles requests for student credentials and allows administrators to track, verify, and approve them.",
       icon: "solar:document-text-linear",
-      image: "/src/assets/login.png"
+      image: loginImg
     },
     {
       title: "Formal Language Theory Simulator",
       tech: "C++, Automata Theory (NFA/DFA/PDA), Bioinformatics",
       desc: "A C++ simulator exploring Formal Language Theory in information retrieval and bioinformatics. It compiles user queries into NFAs/DFAs for pattern matching and implements Pushdown Automata.",
       icon: "lucide:code",
-      image: "/src/assets/automata.png"
+      image: automataImg
     },
     {
       title: "Redis-PubSub-Chat",
       tech: "Python, Redis, Pub/Sub, Distributed Systems",
       desc: "A real-time, terminal-based chat application demonstrating distributed system design. It utilizes Cloud Redis as a centralized message broker and Python's threading module.",
       icon: "solar:chat-round-line-linear",
-      image: "/src/assets/redis.png"
+      image: redisImg
     },
     {
       title: "LocatR - Student Record Locator System",
       tech: "Python, CustomTkinter (GUI), SQLite, QR Code",
       desc: "A desktop application commissioned by a University Registrar to manage student data and geographical locations. Features include dynamic search, duplicate validation, and automated QR code generation.",
       icon: "solar:map-point-linear",
-      image: "/src/assets/main.png"
+      image: mainImg
     }
   ];
 
