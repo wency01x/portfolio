@@ -43,14 +43,14 @@ const Experience = () => {
       tech: "Python, FastAPI, PostgreSQL, pgvector, Gemini API",
       desc: "An AI agent that allows users to query their database in plain English. The system stores database schemas using embeddings, translates natural language into SQL, executes the query, and explains the answer.",
       icon: "solar:database-line-duotone",
-      image: "https://placehold.co/600x400/101010/38bdf8?text=DBMind+Agent"
+      image: "src/assets/dbmind.png"
     },
     {
       title: "iREQUEST: Online Credential Request System",
       tech: "Full-stack Web Development, Payment Integration",
       desc: "A full-stack web application with admin verification and payment monitoring. It handles requests for student credentials and allows administrators to track, verify, and approve them.",
       icon: "solar:document-text-linear",
-      image: "https://placehold.co/600x400/101010/38bdf8?text=iREQUEST"
+      image: "src/assets/login.png"
     },
     {
       title: "Formal Language Theory Simulator",
