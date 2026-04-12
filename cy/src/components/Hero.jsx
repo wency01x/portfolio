@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Heroprofile from '../assets/Heroprofile.png'
+import Heroprofile from '../assets/heroprofile.png'
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { 
-      staggerChildren: 0.2 
+    transition: {
+      staggerChildren: 0.2
     }
   }
 };
 
 const itemVariants = {
   hidden: { opacity: 0, x: -100 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { type: "spring", stiffness: 60, damping: 15 } 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 60, damping: 15 }
   }
 };
 
@@ -34,7 +34,7 @@ const Hero = () => {
 
         const cached = localStorage.getItem('github_contributions_v2');
         const cachedTime = localStorage.getItem('github_contributions_time_v2');
-        
+
         // Use cache if less than 1 hour old
         if (cached && cachedTime && (Date.now() - parseInt(cachedTime)) < 3600000) {
           setCommits(`${cached}+`);
@@ -43,7 +43,7 @@ const Hero = () => {
 
         const response = await fetch('https://github-contributions-api.deno.dev/wency01x.json');
         const data = await response.json();
-        
+
         if (data.totalContributions) {
           const rounded = Math.floor(data.totalContributions / 100) * 100;
           setCommits(`${rounded}+`);
@@ -75,7 +75,7 @@ const Hero = () => {
     <>
       <main className="md:px-8 grid grid-cols-1 md:grid-cols-12 md:gap-8 min-h-screen w-full max-w-7xl z-10 pt-20 pr-4 pb-10 pl-4 gap-x-6 gap-y-10 items-center">
         {/* Left Column: Title & Intro */}
-        <motion.div 
+        <motion.div
           className="md:col-span-7 flex flex-col md:gap-8 order-1 gap-x-6 gap-y-6 justify-center"
           variants={containerVariants}
           initial="hidden"
@@ -176,7 +176,7 @@ const Hero = () => {
             </motion.a>
 
             {/* GitHub Commits Widget */}
-            <motion.a 
+            <motion.a
               href="https://github.com/wency01x"
               target="_blank"
               rel="noopener noreferrer"
