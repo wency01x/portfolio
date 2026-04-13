@@ -100,7 +100,7 @@ const Hero = () => {
               onClick={() => setShowResume(true)}
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95, y: 0 }}
-              className="ios-glass group w-full sm:w-auto rounded-[28px] p-5 flex items-center justify-between gap-6 hover:bg-white/5 transition-colors duration-500 cursor-pointer relative overflow-hidden"
+              className="ios-glass group w-fit rounded-[28px] p-5 flex items-center justify-between gap-6 hover:bg-white/5 transition-colors duration-500 cursor-pointer relative overflow-hidden"
             >
               <div className="relative z-10 flex flex-col items-start">
                 <span className="text-white group-hover:text-[#38bdf8] text-lg font-normal tracking-tight font-google-sans-flex transition-colors duration-300">
@@ -124,21 +124,17 @@ const Hero = () => {
               onClick={(e) => handleScroll(e, 'experience')}
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95, y: 0 }}
-              className="ios-glass rounded-[32px] p-6 col-span-1 sm:col-span-2 flex items-center justify-between hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer relative"
+              className="ios-glass rounded-[32px] p-6 col-span-1 sm:col-span-2 flex items-center hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer relative min-h-[112px] sm:min-h-[124px]"
             >
-              <div className="relative z-10 flex flex-col gap-1.5 mt-2">
-                <div className="z-20 flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full border border-white/5 w-fit">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-[#38bdf8]"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#38bdf8]"></span>
-                  </span>
-                  <span className="text-[#38bdf8] text-xs font-sans tracking-wide">Available for work</span>
-                </div>
-                <div className="z-20">
-                  <p className="text-white font-normal text-sm font-sans pl-1">
-                    Full-Stack Developer
-                  </p>
-                </div>
+              <div className="absolute inset-0 overflow-hidden rounded-[32px] pointer-events-none">
+                {/* Abstract Shape */}
+                <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500 pointer-events-none"></div>
+              </div>
+
+              <div className="relative z-10 w-full flex items-center">
+                <p className="text-white font-normal text-base sm:text-lg font-sans pl-2">
+                  Full-Stack Developer
+                </p>
               </div>
 
               {/* Overlapping Profile Image */}
@@ -149,8 +145,6 @@ const Hero = () => {
                   className="w-auto h-48 md:h-56 object-cover object-bottom"
                 />
               </div>
-              {/* Abstract Shape */}
-              <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500 pointer-events-none"></div>
             </motion.a>
 
             {/* Stats Widget */}
