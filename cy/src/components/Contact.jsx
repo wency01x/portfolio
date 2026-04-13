@@ -28,7 +28,7 @@ const Contact = () => {
 
         <a
           href="mailto:casino.wency2ustp@gmail.com"
-          className="group inline-flex items-center gap-2 bg-[#38bdf8]/10 border border-[#38bdf8] text-[#38bdf8] px-8 py-4 rounded-full font-normal hover:scale-[1.02] hover:bg-[#38bdf8] hover:text-black transition-all duration-300"
+          className="group inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-full font-normal hover:scale-[1.02] hover:bg-white/10 hover:border-white/20 hover:text-[#38bdf8] transition-all duration-300 backdrop-blur-sm"
         >
           <span className="font-sans text-lg">Send me an email</span>
           <iconify-icon icon="solar:letter-linear" width="24" height="24" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
