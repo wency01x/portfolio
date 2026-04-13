@@ -124,15 +124,15 @@ const Hero = () => {
               onClick={(e) => handleScroll(e, 'experience')}
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95, y: 0 }}
-              className="ios-glass rounded-[32px] p-6 col-span-1 sm:col-span-2 flex items-center hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer relative min-h-[112px] sm:min-h-[124px]"
+              className="ios-glass rounded-[32px] pl-4 pr-6 py-6 sm:p-6 col-span-1 sm:col-span-2 flex items-center hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer relative min-h-[112px] sm:min-h-[124px]"
             >
               <div className="absolute inset-0 overflow-hidden rounded-[32px] pointer-events-none">
                 {/* Abstract Shape */}
                 <div className="absolute right-[-20px] bottom-[-40px] w-32 h-32 bg-gradient-to-br from-[#38bdf8] to-transparent rounded-full opacity-0 blur-2xl group-hover:opacity-30 transition-opacity duration-500 pointer-events-none"></div>
               </div>
 
-              <div className="relative z-10 w-full flex items-center">
-                <p className="text-white font-normal text-base sm:text-lg font-sans pl-2">
+              <div className="relative z-10 w-[60%] sm:w-full flex items-center">
+                <p className="text-white font-normal text-base sm:text-lg font-sans leading-snug">
                   Full-Stack Developer
                 </p>
               </div>
