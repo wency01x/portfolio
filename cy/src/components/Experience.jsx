@@ -11,7 +11,17 @@ import mainImg from '../assets/main.png';
 
 const Experience = () => {
   const containerRef = useRef(null);
+  const scrollContainerRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const { current } = scrollContainerRef;
+      const firstChild = current.children[0];
+      const cardWidth = firstChild ? firstChild.offsetWidth + 24 : 350;
+      current.scrollBy({ left: direction === 'left' ? -cardWidth : cardWidth, behavior: 'smooth' });
+    }
+  };
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -103,6 +113,22 @@ const Experience = () => {
             Professional roles and major academic system implementations.
           </motion.p>
         </motion.div>
+
+        {/* Carousel Navigation Arrows */}
+        <div className="flex gap-3 relative z-20">
+          <button 
+            onClick={() => scroll('left')}
+            className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all bg-transparent"
+          >
+            <iconify-icon icon="solar:alt-arrow-left-linear" width="24" height="24"></iconify-icon>
+          </button>
+          <button 
+            onClick={() => scroll('right')}
+            className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all bg-[#1a1a1a]"
+          >
+            <iconify-icon icon="solar:alt-arrow-right-linear" width="24" height="24"></iconify-icon>
+          </button>
+        </div>
       </div>
 
       <motion.div 
@@ -110,43 +136,50 @@ const Experience = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        ref={scrollContainerRef}
+        className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-12 pt-4 hide-scrollbar"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project, idx) => (
           <motion.div
             key={idx}
             variants={itemVariants}
-            className="ios-glass p-8 rounded-[32px] hover:bg-white/5 transition-all duration-500 group relative flex flex-col justify-between hover:z-50"
+            className="snap-start shrink-0 self-stretch w-[85%] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-[#131315] hover:bg-[#1a1a1a] border border-white/5 hover:border-white/10 transition-all duration-500 rounded-[24px] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50"
           >
-            <div>
-              {/* Image Placeholder */}
-              <div 
-                className="relative z-20 w-full h-48 mb-6 rounded-2xl overflow-hidden bg-white/5 border border-white/10 group-hover:border-[#38bdf8]/50 transition-all duration-500 group-hover:scale-[1.05] group-hover:-translate-y-2 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] origin-bottom cursor-pointer"
-                onClick={() => setSelectedImage(project.image || "/src/assets/on-hold.png")}
-              >
-                <img 
-                  src={project.image || "/src/assets/on-hold.png"} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-all duration-500"
-                />
-              </div>
+            {/* Image Wrapper (no padding, edge-to-edge) */}
+            <div 
+              className="relative w-full h-52 sm:h-60 shrink-0 overflow-hidden bg-white/5 cursor-pointer border-b border-white/5"
+              onClick={() => setSelectedImage(project.image || "/src/assets/on-hold.png")}
+            >
+              <img 
+                src={project.image || "/src/assets/on-hold.png"} 
+                alt={project.title} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
 
-              <div className="relative z-10 w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-[#38bdf8] group-hover:scale-110 transition-all duration-300 mb-6 border border-white/5">
-                <iconify-icon icon={project.icon} width="24" height="24"></iconify-icon>
-              </div>
-
-              <h3 className="relative z-10 text-xl text-white tracking-tight mb-2 font-google-sans-flex font-normal">
+            {/* Content Area */}
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <h3 className="text-xl md:text-[22px] font-bold text-white tracking-tight mb-3">
                 {project.title}
               </h3>
 
-              <p className="relative z-10 text-white/50 text-sm leading-relaxed font-extralight font-sans mb-4">
+              <p className="text-[#a1a1aa] text-sm leading-relaxed mb-6 flex-grow">
                 {project.desc}
               </p>
-            </div>
 
-            <p className="relative z-10 text-[#38bdf8] text-xs font-normal tracking-wide uppercase mt-4 pt-4 border-t border-white/10 font-sans">
-              {project.tech}
-            </p>
+              {/* Bottom Tags/Tech Pills replacing tech string */}
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.tech.split(',').map((techItem, i) => (
+                  <span 
+                    key={i} 
+                    className="bg-white/5 hover:bg-white/10 transition-colors border border-white/10 text-white/50 text-[10px] sm:text-xs font-semibold tracking-wider uppercase px-3 py-1.5 rounded-full whitespace-nowrap"
+                  >
+                    {techItem.trim()}
+                  </span>
+                ))}
+              </div>
+            </div>
           </motion.div>
         ))}
       </motion.div>
